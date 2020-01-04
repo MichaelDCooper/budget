@@ -15,6 +15,5 @@ export const auditValues = values => {
       values[value] = 0;
     }
   }
-  console.log(values);
   return values;
 };

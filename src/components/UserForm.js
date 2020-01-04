@@ -25,7 +25,7 @@ const UserForm = () => {
         {props => (
           <form onSubmit={props.handleSubmit} className="ui form">
             {getNames(props.initialValues).map(name => (
-              <CreateFields name={name} />
+              <CreateFields name={name} key={name} />
             ))}
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
             <button className="ui button primary" type="submit">
