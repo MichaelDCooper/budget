@@ -2,6 +2,7 @@ import React from "react";
 import { Formik, Field } from "formik";
 import { values } from "./helpers/initialValues";
 import { getNames, auditValues } from "./helpers/utils";
+import GraphContext, { insertGraphValues } from "../contexts/GraphContext";
 
 const CreateFields = ({ name }) => {
   return (
@@ -13,12 +14,13 @@ const CreateFields = ({ name }) => {
 };
 
 const UserForm = () => {
+  //const graphInfo = useContext(GraphContext);
   return (
     <div>
       <Formik
         initialValues={values}
         onSubmit={(values, actions) => {
-          auditValues(values);
+          GraphContext.insertGraphValues(auditValues(values));
           actions.setSubmitting(false);
         }}
       >
