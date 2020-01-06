@@ -1,4 +1,4 @@
-export const values = {
+export const formInit = {
   Salary: "",
   "Additional Income": "",
   "Mortgage/Rent": "",
@@ -22,3 +22,28 @@ export const values = {
   Investments: "",
   Retirement: ""
 };
+
+export const chartInit = [
+  3000,
+  500,
+  700,
+  100,
+  40,
+  40,
+  45,
+  30,
+  50,
+  200,
+  50,
+  80,
+  200,
+  25,
+  50,
+  75,
+  175,
+  100,
+  38,
+  125,
+  50,
+  150
+];

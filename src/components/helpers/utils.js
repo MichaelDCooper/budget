@@ -17,3 +17,12 @@ export const auditValues = values => {
   }
   return values;
 };
+
+export const objToArr = obj => {
+  let arr = [];
+  for (let items in obj) {
+    let toInt = parseInt(obj[items], 10);
+    arr.push(toInt);
+  }
+  return arr;
+};
