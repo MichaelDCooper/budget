@@ -26,3 +26,25 @@ export const objToArr = obj => {
   }
   return arr;
 };
+
+export const objNameToArr = obj => {
+  let arr = [];
+  for (let names in obj) {
+    arr.push(names);
+  }
+  return arr;
+};
+
+export const getExpenseData = arr => {
+  const expenseData = [];
+  const totalIncome = arr[0] + arr[1];
+  let totalExpenses = 0;
+
+  for (let i = 2; i < arr.length; i++) {
+    totalExpenses += arr[i];
+  }
+
+  expenseData.push(totalIncome, totalExpenses);
+
+  return expenseData;
+};
